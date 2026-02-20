@@ -1,0 +1,188 @@
+
+**/modules/README.txt
+**/profiles/README.txt
+**/themes/README.txt
+**/sites/README.txt
+**/sites/example.sites.php
+**/sites/example.settings.local.php
+**/sites/development.services.yml
+**/.csslintrc
+**/.editorconfig
+**/.eslintignore
+**/.eslintrc.json
+**/.gitattributes
+**/.ht.router.php
+**/docroot/**/.htaccess
+**/autoload.php
+**/example.gitignore
+**/docroot/sites/default/files/
+**/index.php
+/INSTALL.txt
+/LICENSE.txt
+/README.txt
+/robots.txt
+/update.php
+/web.config
+
+# IDEs #
+.idea
+.vscode
+
+# Ignore drupal core.
+docroot/core
+
+# Ignore paths that contain user-generated content.
+docroot/sites/*/files/*
+/files-private
+docroot/sites/*/private
+drush/contrib
+# ...except for the site's responsive favicons
+!docroot/sites/*/files/favicons
+
+# Ignore contrib modules. These should be created during build process.
+docroot/modules/contrib
+docroot/themes/contrib
+docroot/profiles/contrib
+docroot/libraries
+drush/Commands
+
+# Ignore custom theme build artifacts
+docroot/themes/custom/*/node_modules
+docroot/themes/custom/lshtm/css
+docroot/themes/custom/*/styleguide
+
+# Ensure custom theme files are never ignored
+!docroot/themes/custom/chc__theme/webpack.config.js
+!docroot/themes/custom/chc__theme/**/*.twig
+
+# Ensure patches and recipes are tracked
+!patches/
+!recipes/
+
+# Ignore config files ingnored with config_ignored
+# config/default/group.role.*.yml
+# config/default/system.menu.group-*-menu.yml
+
+# Ignore build artifacts
+deployment_identifier
+/deploy
+bin/*
+tmp
+reports
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Eclipse
+*.pydevproject
+.project
+.metadata
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpathk
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# User-specific stuff:
+.idea/
+
+#XHProf
+xhprof_*
+
+#Composer vendor
+vendor/
+vendor/.git
+
+#Sass
+.sass-cache
+*.css.map
+
+#Netbeans IDE
+nbproject
+nbproject/*
+
+# DrupalVM
+.vagrant/
+
+# Theme
+.sass-cache/*
+
+*node_modules*
+*kss_generated*
+css/*
+styleguide
+
+# DevDesktop
+*.dd
+
+# Lando
+config/php
+
+#Exports
+*.gz
+*.sql
+*.zip
+
+# PHPStorm
+atlassian-ide-plugin.xml
+
+#NPM
+npm-debug.log
+
+# Drush 9 Checksums
+drush/sites/.checksums
+
+# Deprecation detector rules
+.rules
+/travis_wait*
+.phpcs-cache
+
+# local dev private files
+private
+.ssh
