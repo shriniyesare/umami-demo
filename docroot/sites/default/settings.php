@@ -866,7 +866,7 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\sqlite\\Driver\\Database\\sqlite',
   'autoload' => 'core/modules/sqlite/src/Driver/Database/sqlite/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_WHdFDyo9xjULROFlhVUtW_qsCx83tj3U6QLkpoaAuMHXsjD-qbZDoKHUPM01i4lKFjEvJy5EHQ/sync';
+$settings['config_sync_directory'] = '../config/default';
 
 // Automatically generated include for settings managed by ddev.
 $ddev_settings = __DIR__ . '/settings.ddev.php';
