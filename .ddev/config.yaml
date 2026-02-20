@@ -1,4 +1,4 @@
-name: drupal11
+name: umami-demo
 type: drupal11
 docroot: docroot
 php_version: "8.3"
