@@ -1,0 +1,9 @@
+# Shield module default configuration.
+# Shield is disabled by default. Enable and set credentials per environment.
+# IMPORTANT: Never commit real credentials to version control.
+# Override user/pass in settings.php or via environment variables.
+shield_enable: false
+user: ''
+pass: ''
+print: 'Please authenticate to access this site.'
+allow_cli: true

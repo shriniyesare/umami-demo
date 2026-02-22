@@ -1,35 +1,63 @@
-# Drupal 11 Umami Demo Site
+# Umami Demo
 
-This project sets up a Drupal 11 site with the Umami demo profile, providing a fully functional food and restaurant themed website.
+This is a Drupal project based on the Umami demo profile.
 
-## Prerequisites
+## Setup
 
-- PHP 8.1 or higher
-- Composer 2.x
-- MySQL 8.0 or MariaDB 10.3 or higher
-- Web server (Apache or Nginx)
-- Node.js and npm (for frontend assets)
+1. Clone the repository
+2. Run `composer install`
+3. Set up your database
+4. Install Drupal using the Umami demo profile
 
-## Installation Steps
+## Development
 
-### 1. Clone the Repository
+This project uses the standard Drupal project structure with:
+- `docroot/` - Drupal webroot
+- `vendor/` - Composer dependencies
+- `composer.json` - Project dependencies
+- `config/sync/` - Drupal configuration files
+
+## Modules
+
+Currently installed contrib modules:
+- Paragraphs
+- Pathauto
+- Token
+- **Shield** - HTTP Basic Authentication protection for the site
+
+## Shield Module
+
+The [Drupal Shield module](https://www.drupal.org/project/shield) provides HTTP Basic Authentication to protect the site from unauthorized access. This is particularly useful for staging/development environments.
+
+### Enabling Shield
+
+After running `composer install`, enable the Shield module using Drush:
 
 ```bash
-git clone git@github.com:shriniyesare/umami-demo.git
-cd umami-demo
+drush en shield -y
 ```
 
-### 2. Install Dependencies
+### Configuring Shield
+
+Configure Shield credentials via the Drupal Admin UI at `/admin/config/system/shield` or via Drush:
+
 ```bash
-composer install
+# Set username
+drush config-set shield.settings user YOUR_USERNAME -y
+
+# Set password
+drush config-set shield.settings pass YOUR_PASSWORD -y
+
+# Enable Shield protection
+drush config-set shield.settings shield_enable true -y
+
+# Clear cache
+drush cr
 ```
 
-### 3. Install Drupal with Umami Profile
-```bash
-# For a clean installation
-./vendor/bin/drush site-install umami --account-name=admin --account-pass=admin --site-name="Umami Demo" --site-mail=admin@example.com
+### Security Notes
 
-# Or if you prefer to use the web installer:
-# Access your site in a browser and follow the installation wizard
-# Select "Umami" as the installation profile
-```
+- **Never commit real credentials to version control**
+- Override Shield credentials in `docroot/sites/default/settings.php` or via environment variables for production environments
+- The default configuration (`config/sync/shield.settings.yml`) has Shield disabled (`shield_enable: false`) with empty credentials
+- CLI access (Drush) is allowed by default (`allow_cli: true`) to prevent locking out deployments
