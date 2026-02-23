@@ -1,0 +1,8 @@
+credentials:
+  shield:
+    user: admin
+    pass: secret
+allow_cli: true
+enabled: true
+print: 'Please provide credentials to access this site.'
+shield_enable: true

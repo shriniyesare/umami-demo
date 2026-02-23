@@ -25,6 +25,7 @@
         "drupal/pathauto": "^1.14",
         "drupal/video_embed_field": "^3.0",
         "drupal/webform": "^6.3@beta",
+        "drupal/shield": "^1.7",
         "drush/drush": "^13.7"
     },
     "conflict": {
