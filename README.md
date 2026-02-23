@@ -33,3 +33,16 @@ composer install
 # Access your site in a browser and follow the installation wizard
 # Select "Umami" as the installation profile
 ```
+
+## Contrib Modules
+
+### Shield
+
+The [Shield module](https://www.drupal.org/project/shield) (`drupal/shield ^1.0`) is installed to provide HTTP authentication (basic auth) to protect the site from unauthorized access. This is especially useful for staging and development environments.
+
+To enable and configure Shield:
+```bash
+./vendor/bin/drush en shield
+```
+
+Then visit `/admin/config/system/shield` to set the username and password.
