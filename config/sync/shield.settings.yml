@@ -1,0 +1,7 @@
+credentials:
+  shield_user: admin
+  shield_pass: secret
+allow_cli: true
+shield_enable: true
+shield_print: 'Please provide credentials to access this site.'
+shield_paths: ''
