@@ -23,6 +23,7 @@
         "drupal/entity_embed": "^1.7",
         "drupal/paragraphs": "^1.18",
         "drupal/pathauto": "^1.14",
+        "drupal/shield": "^1.7",
         "drupal/video_embed_field": "^3.0",
         "drupal/webform": "^6.3@beta",
         "drush/drush": "^13.7"

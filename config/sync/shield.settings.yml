@@ -1,0 +1,8 @@
+shield_enable: true
+shield_allow_cli: true
+shield_print: 'Hello! Please log in.'
+user: acquia
+password: hackathon
+paths:
+  allow: ''
+  deny: ''
